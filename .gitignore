@@ -1,0 +1,3 @@
+*.pyc
+src/controllers/__pycache__
+.vscode
