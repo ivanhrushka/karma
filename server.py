@@ -1,10 +1,11 @@
 from aiohttp import web
 
-from src.controllers.index import handler
+from src.routes.index import setup_routes
 
-PORT: int = 8880
+PORT = 8880
+HOST = 'localhost'
 
 app = web.Application()
-app.router.add_get('/', handler)
+setup_routes(app)
 
-web.run_app(app, host='localhost', port=PORT)
+web.run_app(app, host=HOST, port=PORT)
